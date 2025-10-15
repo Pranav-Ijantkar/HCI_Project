@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Course</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="far fa-calendar-alt"></i> My Sessions</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content-wrapper">
+            <!-- Header -->
+            <header class="main-header">
+                <span class="close-icon">&times;</span>
+                <div class="user-profile">
+                    <i class="far fa-bell notification-bell"></i>
+                    <img src="https://placehold.co/40x40/EFEFEF/333?text=P" alt="User Profile Picture" class="profile-pic">
+                    <div class="user-details">
+                        <span class="user-name">Prerana</span>
+                        <span class="user-role">Educator <i class="fas fa-chevron-down"></i></span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Form Container -->
+            <main class="course-form-container">
+                <h1>Create New Course</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="course-title">Course Title</label>
+                        <input type="text" id="course-title" placeholder="e.g. C++ Data Structures">
+                    </div>
+                    <div class="form-group">
+                        <label for="course-description">Course Description</label>
+                        <textarea id="course-description" rows="3" placeholder="A beginner-friendly course..."></textarea>
+                    </div>
+
+                    <!-- Course Videos Section -->
+                    <div class="form-section">
+                        <div class="section-header">
+                            <h2>Course Videos</h2>
+                            <a href="#" class="add-link">+ Add Video</a>
+                        </div>
+                        <div class="item-block">
+                            <h3>Video 1</h3>
+                            <div class="item-fields">
+                                <div class="form-group">
+                                    <label for="video-title-1">Video Title</label>
+                                    <input type="text" id="video-title-1" placeholder="e.g. Intro to Arrays">
+                                </div>
+                                <div class="form-group">
+                                    <label for="video-url-1">Video URL</label>
+                                    <input type="text" id="video-url-1" placeholder="https://example.com/video.mp4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Notes Section -->
+                    <div class="form-section">
+                        <div class="section-header">
+                            <h2>Course Notes</h2>
+                            <a href="#" class="add-link">+ Add Note</a>
+                        </div>
+                        <div class="item-block">
+                            <h3>Note 1</h3>
+                            <div class="item-fields">
+                                <div class="form-group">
+                                    <label for="note-filename-1">Filename</label>
+                                    <input type="text" id="note-filename-1" placeholder="e.g. array_notes.pdf">
+                                </div>
+                                <div class="form-group">
+                                    <label for="note-url-1">Note URL</label>
+                                    <input type="text" id="note-url-1" placeholder="https://example.com/notes.pdf">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                        <button type="button" class="btn btn-primary">Create Course</button>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
+
