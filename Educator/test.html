@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Assessment</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="test.css">
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Main Assessment Container -->
+    <div class="assessment-container">
+        
+        <!-- Header Section -->
+        <header class="assessment-header">
+            <h1>Skills Assessment</h1>
+            <p>Answer at least 7 out of 10 questions correctly to qualify</p>
+        </header>
+
+        <!-- Assessment Body -->
+        <main class="assessment-body">
+            
+            <!-- Assessment Info: Step and Timer -->
+            <div class="assessment-info">
+                <div class="step-indicator">
+                    <div class="step-number">2</div>
+                    <div class="step-text">
+                        <h2>Assessment</h2>
+                        <p>Test your knowledge</p>
+                    </div>
+                </div>
+                <div class="timer">
+                    <i class="far fa-clock"></i>
+                    <span>4:54</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <!-- Question Header -->
+            <div class="question-header">
+                <p class="question-counter">Question 1 of 9</p>
+                <p class="answered-counter">1 answered</p>
+            </div>
+
+            <!-- Question Content -->
+            <div class="question-content">
+                <h3 class="question-title">What is closure in JavaScript?</h3>
+                <form class="answer-options">
+                    <div class="option">
+                        <input type="radio" id="option1" name="q1" value="A">
+                        <label for="option1">A way to hide implementation details</label>
+                    </div>
+                    <div class="option selected">
+                        <input type="radio" id="option2" name="q1" value="B" checked>
+                        <label for="option2">A function that has access to variables from its outer scope</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="option3" name="q1" value="C">
+                        <label for="option3">A method to close browser windows</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="option4" name="q1" value="D">
+                        <label for="option4">A technique to prevent memory leaks</label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer Navigation -->
+            <footer class="assessment-footer">
+                <a href="eduStart.html"><button type="button" class="prev-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Previous
+                </button></a>
+                <a href="welcome.html"><button type="button" class="next-btn">
+                    Next
+                    <i class="fas fa-arrow-right"></i>
+                </button></a>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
+

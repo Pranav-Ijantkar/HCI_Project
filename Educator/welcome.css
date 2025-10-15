@@ -1,0 +1,156 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: #374151;
+}
+
+/* Main Welcome Container */
+.welcome-container {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 48rem; /* 768px */
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Header Section */
+.welcome-header {
+    background: linear-gradient(to right, #6d28d9, #8b5cf6);
+    color: #ffffff;
+    padding: 2rem;
+}
+
+.welcome-header h1 {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+}
+
+.welcome-header p {
+    color: #ddd6fe;
+    margin: 0;
+    font-size: 1rem; /* 16px */
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 3rem 2rem;
+}
+
+.icon-container {
+    width: 4.5rem; /* 72px */
+    height: 4.5rem; /* 72px */
+    background-color: #f5f3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    color: #6d28d9;
+}
+
+.icon-container .fa-graduation-cap {
+    font-size: 2.25rem; /* 36px */
+}
+
+.main-content h2 {
+    font-size: 1.75rem; /* 28px */
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 1rem 0;
+}
+
+.main-content .description {
+    color: #6b7280;
+    max-width: 36rem; /* 576px */
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* For smaller screens */
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #6d28d9;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #5b21b6;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #4f46e5;
+    border-color: #d1d5db;
+}
+
+.btn-secondary:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+/* Info Box Footer */
+.info-box {
+    background-color: #f5f3ff;
+    padding: 1.5rem 2rem;
+    text-align: left;
+    border-top: 1px solid #e5e7eb;
+}
+
+.info-box h3 {
+    font-size: 1rem; /* 16px */
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: #1f2937;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.info-box li {
+    color: #4f46e5;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.info-box .fa-check {
+    font-size: 0.875rem; /* 14px */
+}
+
