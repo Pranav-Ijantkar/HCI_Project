@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become an Educator</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Card Container -->
+    <div class="card-container">
+        
+        <!-- Header Section -->
+        <header class="card-header">
+            <h1>Become an Educator</h1>
+            <p>Share your knowledge and help others learn</p>
+        </header>
+
+        <!-- Form Section -->
+        <main class="card-body">
+            
+            <!-- Registration Step Indicator -->
+            <div class="registration-step">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <h2>Registration</h2>
+                    <p>Tell us about your education and skills</p>
+                </div>
+            </div>
+
+            <!-- Form Fields -->
+            <form action="#" method="POST">
+                
+                <!-- Current Education -->
+                <div class="form-group">
+                    <label for="education">Current Education</label>
+                    <input type="text" id="education" name="education" placeholder="e.g. B.Tech in Computer Engineering">
+                </div>
+
+                <!-- Institute Name -->
+                <div class="form-group">
+                    <label for="institute">Institute Name</label>
+                    <input type="text" id="institute" name="institute" placeholder="e.g. DY Patil College, Talegaon">
+                </div>
+
+                <!-- Year of Completion -->
+                <div class="form-group">
+                    <label for="year">Year of Completion</label>
+                    <input type="text" id="year" name="year">
+                </div>
+
+                <!-- Skills Section -->
+                <div class="form-group">
+                    <label class="skills-label">Skills</label>
+                    <p class="skills-description">Select all that apply. You'll be tested on these skills.</p>
+                    <div class="skills-grid">
+                        <!-- Skill Checkboxes -->
+                        <div class="skill-item">
+                            <input id="ml" name="skills" type="checkbox">
+                            <label for="ml">Machine Learning</label>
+                        </div>
+                        <div class="skill-item">
+                            <input id="python" name="skills" type="checkbox">
+                            <label for="python">Python</label>
+                        </div>
+                        <div class="skill-item">
+                            <input id="javascript" name="skills" type="checkbox">
+                            <label for="javascript">JavaScript</label>
+                        </div>
+                         <div class="skill-item">
+                            <input id="react" name="skills" type="checkbox">
+                            <label for="react">React</label>
+                        </div>
+                        <div class="skill-item">
+                            <input id="nodejs" name="skills" type="checkbox">
+                            <label for="nodejs">Node.js</label>
+                        </div>
+                         <div class="skill-item">
+                            <input id="datascience" name="skills" type="checkbox">
+                            <label for="datascience">Data Science</label>
+                        </div>
+                        <div class="skill-item">
+                            <input id="webdev" name="skills" type="checkbox">
+                            <label for="webdev">Web Development</label>
+                        </div>
+                        <div class="skill-item">
+                            <input id="mobiledev" name="skills" type="checkbox">
+                            <label for="mobiledev">Mobile Development</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- File Upload Section -->
+                <div class="form-group">
+                    <label>Upload Certificates (.png only)</label>
+                    <div class="file-upload-area">
+                        <div class="file-upload-content">
+                            <!-- Upload Icon -->
+                            <svg class="upload-icon" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>
+                                Drag and drop your certificates here, or
+                                <button type="button" class="browse-files-btn">
+                                    browse files
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="form-group">
+                     <button type="button" class="submit-btn">
+                        Prove Your Skills
+                        <!-- Arrow Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>
+
+
