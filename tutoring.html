@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoring Dashboard - EduConnect</title>
+    
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="tutoring.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ======================= -->
+        <!--     SIDEBAR HTML        -->
+        <!-- ======================= -->
+        <aside class="sidebar">
+            <!-- Logo -->
+            <div class="sidebar-logo">
+                <div class="logo-icon"></div>
+                <span class="logo-text">EduConnect</span>
+            </div>
+
+            <!-- Nav Links -->
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="./Courses.html" class="nav-item">
+                            <i class="fas fa-book"></i>
+                            <span>My Courses</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./forum.html" class="nav-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Forum</span>
+                        </a>
+                    </li>
+                    <!-- Active Link -->
+                    <li>
+                        <a href="./tutoring.html" class="nav-item active">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Tutoring</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item">
+                            <i class="fas fa-building"></i>
+                            <span>NGO Partners</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./saved.html" class="nav-item">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Saved</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./analytics.html" class="nav-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./settings.html" class="nav-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Logout Button -->
+            <div class="sidebar-logout">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- ======================= -->
+        <!--     MAIN CONTENT HTML   -->
+        <!-- ======================= -->
+        <main class="main-content">
+            
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-bar-right">
+                    <i class="far fa-bell top-bar-icon"></i>
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="https://placehold.co/36x36/8B5CF6/FFFFFF?text=P" alt="Profile Picture">
+                            <span class="online-indicator"></span>
+                        </div>
+                        <div class="user-info">
+                            <span class="user-name">Prerana <i class="fas fa-chevron-down"></i></span>
+                            <span class="user-role">Learner</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>Tutoring Dashboard</h1>
+                <button class="btn btn-blue">
+                    <i class="fas fa-plus"></i> Schedule New Session
+                </button>
+            </header>
+
+            <!-- Tutoring Grid -->
+            <section class="tutoring-grid">
+                
+                <!-- Card 1 -->
+                <div class="tutoring-card">
+                    <div class="card-image-container">
+                        <img src="https://placehold.co/400x200/0A2A4E/7DD3FC?text=Tech+Image" alt="Machine Learning Algorithms">
+                        <span class="category-tag">AI & ML</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Machine Learning Algorithms</h3>
+                            <span class="session-tag group">Group</span>
+                        </div>
+                        <p class="card-author">By Dr. Alan Smith</p>
+                        <div class="card-meta">
+                            <span class="level intermediate">Intermediate</span>
+                            <span class="date">Apr 15, 2025 • 2:00 PM</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="students">8/10 students</span>
+                            <button class="btn btn-join">Join Session</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="tutoring-card">
+                    <div class="card-image-container">
+                        <img src="https://placehold.co/400x200/0A4E4A/7DD3FC?text=Tech+Image" alt="React Hooks Deep Dive">
+                        <span class="category-tag">Web Development</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>React Hooks Deep Dive</h3>
+                            <span class="session-tag group">Group</span>
+                        </div>
+                        <p class="card-author">By Alex Johnson</p>
+                        <div class="card-meta">
+                            <span class="level advanced">Advanced</span>
+                            <span class="date">Apr 16, 2025 • 4:30 PM</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="students">5/8 students</span>
+                            <button class="btn btn-join">Join Session</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="tutoring-card">
+                    <div class="card-image-container">
+                        <img src="https://placehold.co/400x200/2A1A3A/7DD3FC?text=Tech+Image" alt="Data Structures Fundamentals">
+                        <span class="category-tag">Programming</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Data Structures Fundamentals</h3>
+                            <span class="session-tag one-on-one">One-on-One</span>
+                        </div>
+                        <p class="card-author">By Prof. Maria Rodriguez</p>
+                        <div class="card-meta">
+                            <span class="level beginner">Beginner</span>
+                            <span class="date">Apr 17, 2025 • 1:00 PM</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="students">1/1 students</span>
+                            <button class="btn btn-join">Join Session</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 (Placeholder) -->
+                <div class="tutoring-card">
+                    <div class="card-image-container">
+                        <img src="https://placehold.co/400x200/1A3A5A/7DD3FC?text=Tech+Image" alt="Cloud Computing">
+                        <span class="category-tag">Cloud Computing</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Intro to AWS</h3>
+                            <span class="session-tag group">Group</span>
+                        </div>
+                        <p class="card-author">By Jane Doe</p>
+                        <div class="card-meta">
+                            <span class="level beginner">Beginner</span>
+                            <span class="date">Apr 18, 2025 • 10:00 AM</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="students">12/20 students</span>
+                            <button class="btn btn-join">Join Session</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 (Placeholder) -->
+                <div class="tutoring-card">
+                    <div class="card-image-container">
+                        <img src="https://placehold.co/400x200/1A1A4A/7DD3FC?text=Tech+Image" alt="Cryptography">
+                        <span class="category-tag">Cryptography</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Modern Cryptography</h3>
+                            <span class="session-tag group">Group</span>
+                        </div>
+                        <p class="card-author">By Sam Lee</p>
+                        <div class="card-meta">
+                            <span class="level advanced">Advanced</span>
+                            <span class="date">Apr 19, 2025 • 3:00 PM</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="students">3/10 students</span>
+                            <button class="btn btn-join">Join Session</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 (Placeholder) -->
+                <div class="tutoring-card">
+                    <div class="card-image-container">
+                        <img src="https://placehold.co/400x200/2A1A3A/7DD3FC?text=Tech+Image" alt="Mobile ML">
+                        <span class="category-tag">Mobile</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>ML on Mobile Devices</h3>
+                            <span class="session-tag one-on-one">One-on-One</span>
+                        </div>
+                        <p class="card-author">By Prof. Maria Rodriguez</p>
+                        <div class="card-meta">
+                            <span class="level advanced">Advanced</span>
+                            <span class="date">Apr 20, 2025 • 11:00 AM</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="students">1/1 students</span>
+                            <button class="btn btn-join">Join Session</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        
+    </div>
+</body>
+</html>

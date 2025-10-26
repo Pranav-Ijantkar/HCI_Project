@@ -1,0 +1,336 @@
+/* 1. RESET AND GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121218; /* brand-content */
+    color: #E5E7EB; /* gray-200 */
+    min-height: 100vh;
+    display: flex;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Custom scrollbar for dark mode (WebKit browsers) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1A1A22;
+}
+::-webkit-scrollbar-thumb {
+    background: #4A4A52;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5A5A62;
+}
+
+/* 2. LAYOUT STYLES (Sidebar + Main Content) */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 256px; /* w-64 */
+    flex-shrink: 0;
+    background-color: #0B0A0F; /* brand-dark */
+    color: #9CA3AF; /* gray-400 */
+    padding: 24px; /* p-6 */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed; /* Fixed position as in the image */
+    left: 0;
+    top: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px; /* p-10 */
+    margin-left: 256px; /* Offset for the fixed sidebar */
+}
+
+/* 3. SIDEBAR STYLES */
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* gap-2.5 */
+    margin-bottom: 40px; /* mb-10 */
+}
+
+.sidebar-logo-icon {
+    width: 28px; /* w-7 */
+    height: 28px; /* h-7 */
+    background-color: #7C3AED; /* brand-accent */
+    border-radius: 8px; /* rounded-lg */
+}
+
+.sidebar-logo-text {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700;
+    color: white;
+}
+
+.sidebar nav {
+    flex-grow: 1;
+}
+
+.sidebar-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* space-y-2 */
+}
+
+.sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* gap-3 */
+    padding: 12px; /* p-3 */
+    border-radius: 8px; /* rounded-lg */
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.sidebar-nav-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-nav-link:hover {
+    background-color: #1A1A22; /* brand-card */
+    color: white;
+}
+
+/* Active link style */
+.sidebar-nav-link.active {
+    background-color: #7C3AED; /* brand-accent */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-nav-link.active svg {
+    fill: white;
+}
+
+.sidebar-logout {
+    margin-top: auto; /* Pushes to the bottom */
+}
+
+/* 4. MAIN CONTENT STYLES */
+.main-content h1 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.main-content .subtitle {
+    color: #9CA3AF; /* gray-400 */
+    margin-bottom: 24px;
+}
+
+.header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap; /* For responsiveness */
+    gap: 16px;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    background-color: #1A1A22; /* brand-card */
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: #9CA3AF; /* gray-400 */
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: #121218; /* brand-content */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-input {
+    background-color: #1A1A22; /* brand-card */
+    border: 1px solid #374151; /* gray-700 */
+    border-radius: 8px;
+    padding: 10px 16px 10px 40px; /* Left padding for icon */
+    color: white;
+    width: 300px;
+    font-weight: 500;
+}
+
+.search-input::placeholder {
+    color: #9CA3AF;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #7C3AED; /* brand-accent */
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.5);
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9CA3AF; /* gray-400 */
+}
+
+/* 5. CARD GRID STYLES */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px; /* gap-6 */
+}
+
+.card {
+    background-color: #1A1A22; /* brand-card */
+    border-radius: 16px; /* rounded-2xl */
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-image-container {
+    position: relative;
+    height: 180px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-save-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: rgba(26, 26, 34, 0.7); /* brand-card with opacity */
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.card-save-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #DC2626; /* red-600 */
+    color: #DC2626;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.card-author {
+    color: #9CA3AF; /* gray-400 */
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.card-info {
+    display: flex;
+    gap: 16px;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+    color: #9CA3AF; /* gray-400 */
+}
+
+.card-badge {
+    padding: 4px 10px;
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600;
+    font-size: 0.75rem; /* text-xs */
+}
+
+.badge-beginner {
+    background-color: #DBEAFE; /* blue-100 */
+    color: #2563EB; /* blue-600 */
+}
+
+.badge-advanced {
+    background-color: #EDE9FE; /* violet-100 */
+    color: #7C3AED; /* violet-600 */
+}
+
+.badge-intermediate {
+    background-color: #CCFBF1; /* teal-100 */
+    color: #0D9488; /* teal-600 */
+}
+
+.btn-continue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    background-color: #2563EB; /* brand-blue */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-continue:hover {
+    background-color: #1D4ED8; /* blue-700 */
+}
